@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Themed Page</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffcc00; /* Disney Yellow */
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            font-family: 'Waltograph', sans-serif; /* Optional: You can add this font for a Disney feel */
+            margin: 0;
+        }
+
+        footer {
+            background-color: #ffcc00; /* Disney Yellow */
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        /* Flexbox layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .flexbox {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-basis: 30%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .column:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #ff5733; /* Disney Red */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Input Date picker */
+        #datepicker {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .flexbox {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .column {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Disney Magic!</h1>
+        </header>
+
+        <div class="flexbox">
+            <div class="column">
+                <h2>About Disney</h2>
+                <p>Disney, founded by Walt Disney and Roy O. Disney, is a global entertainment company that brought iconic characters, films, and magical experiences to life through theme parks, movies, and media.</p>
+            </div>
+            <div class="column">
+                <h2>Disney Legends</h2>
+                <p>From Mickey Mouse to Elsa, Disney has created unforgettable characters that have stood the test of time, inspiring generations of fans around the world.</p>
+            </div>
+            <div class="column">
+                <h2>Event Date</h2>
+                <input type="text" id="datepicker" placeholder="Select a Date">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with love by [Your Name] - A True Disney Fan</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</body>
+</html>
